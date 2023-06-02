@@ -1,6 +1,7 @@
 <h1>New Post</h1>
 
-<%= form_with :model => @post do |form| %>
+<% if @current_user%>
+  <%= form_with :model => @post do |form| %>
   <%= form.hidden_field "place_id" %>
   <p>
     <%= form.label "title" %>
@@ -17,4 +18,5 @@
   <p>
     <%= form.submit %>
   </p>
+  <% end %>
 <% end %>

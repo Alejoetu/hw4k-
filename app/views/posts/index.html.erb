@@ -1,0 +1,13 @@
+<h1>Posts</h1>
+   <% for post in @posts %>
+    <p>
+      <a href="/posts/<%= post["id"] %>">
+      <%= post["title"] %> </a>
+      <p><%= post["posted_on"] %></p> 
+    </p>
+  <br>
+  </br>
+   <% end %>
+<br>
+</br>
+<p><a href="/places">Back to places</a></p>

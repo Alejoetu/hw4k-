@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tacostagram Final</title>
+    <title>User Security</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,9 +15,13 @@
     </div>
     <div>
       <a href="/">Home</a>
+      <% if @current_user%>
+      Hi <%= @current_user ["username"] %>
       <a href="/logout">Logout</a>
+      <% else %> 
+      <a href="/users/new">Sign Up</a> or
       <a href="/login">Login</a>
-      <a href="/users/new">Signup</a>
+      <% end %> 
     </div>
 
     <%= yield %>

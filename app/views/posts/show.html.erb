@@ -1,0 +1,11 @@
+<h1><%= @post["title"] %></h1>
+
+<ul>
+  <li><%= @post["description"] %></li>
+  <li><%= @post["posted_on"] %></li>
+  <li><%= @place["name"] %></li>
+</ul>
+
+<p><%= button_to "Delete this post", @post, :method => "delete" %></p>
+
+<p><a href="/places/<%= @place["id"] %>">Back to place</a></p>
